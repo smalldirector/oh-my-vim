@@ -1,0 +1,4 @@
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
