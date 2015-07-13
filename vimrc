@@ -39,11 +39,15 @@ set expandtab			            " convert tab to space
 set softtabstop=2             " make 2 spaces as one tab
 set matchpairs+=<:>           " enable pair match
 
-" set NERDTree plugin
-nmap <Leader>fl :NERDTreeToggle<CR>
+" NERDTree plugin setting
+nmap <F5> :NERDTreeToggle<CR>
 let NERDTreeWinSize=32
 let NERDTreeWinPos="left"
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 let NERDTreeAutoDeleteBuffer=1
-
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+" Automatically open a NERDTree if no files where specified
+autocmd vimenter * if !argc() | NERDTree | endif
+" Close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
