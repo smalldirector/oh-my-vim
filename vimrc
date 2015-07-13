@@ -37,6 +37,7 @@ set shiftwidth=2		          " space number when format
 set shiftround			          " set shiftround
 set expandtab			            " convert tab to space
 set softtabstop=2             " make 2 spaces as one tab
+set matchpairs+=<:>           " enable pair match
 
 " set NERDTree plugin
 nmap <Leader>fl :NERDTreeToggle<CR>
