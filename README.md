@@ -1,4 +1,4 @@
-# OH-MY-VIM
+# OH MY VIM
 
 ## Screenshots
 ![OH-MY-VIM](http://7b1g7w.com1.z0.glb.clouddn.com/oh-my-vim-screenshot.png)
