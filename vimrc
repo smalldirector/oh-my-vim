@@ -18,6 +18,8 @@ let mapleader=";"
 " set key map
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+nnoremap <Leader>lw <C-W>l
+nnoremap <Leader>hw <C-W>h
 
 " Enable solarized color
 syntax enable
