@@ -37,6 +37,8 @@ To install ctags use your package manager.
 #### Install Gotags
 [Gotags](https://github.com/jstemmer/gotags)
 
+#### Install Fonts for Airline plugin
+[![Install Airline Plugin](http://img.youtube.com/vi/zE3STsWTCcA/0.jpg)](https://www.youtube.com/watch?v=zE3STsWTCcA "Install Airline Plugin")
 ### Basic Installation
 
 ##### 1. Clone the repository:
