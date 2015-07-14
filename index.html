@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Oh-my-vim by smalldirector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Oh-my-vim</h1>
+      <h2 class="project-tagline">My vim configuration</h2>
+      <a href="https://github.com/smalldirector/oh-my-vim" class="btn">View on GitHub</a>
+      <a href="https://github.com/smalldirector/oh-my-vim/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/smalldirector/oh-my-vim/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="oh-my-vim" class="anchor" href="#oh-my-vim" aria-hidden="true"><span class="octicon octicon-link"></span></a>OH MY VIM</h1>
+
+<h2>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h2>
+
+<p><img src="http://7b1g7w.com1.z0.glb.clouddn.com/oh-my-vim-screenshot.png" alt="OH-MY-VIM"></p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<h3>
+<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
+
+<h4>
+<a id="install-ctags" class="anchor" href="#install-ctags" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install Ctags</h4>
+
+<h5>
+<a id="os-x" class="anchor" href="#os-x" aria-hidden="true"><span class="octicon octicon-link"></span></a>OS X</h5>
+
+<p>The default <code>ctags</code> executable in OSX does not support recursive directory
+search (i.e. <code>ctags -R</code>). To get a proper copy of ctags, use one of the
+following options:</p>
+
+<ul>
+<li>
+<p>Using <code>Homebrew</code></p>
+
+<p><code>brew install ctags</code></p>
+</li>
+<li>
+<p>Using <code>MacPorts</code></p>
+
+<p><code>port install ctags</code></p>
+</li>
+</ul>
+
+<h5>
+<a id="linux" class="anchor" href="#linux" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linux</h5>
+
+<p>To install ctags use your package manager. </p>
+
+<ul>
+<li>
+<p>For Debian-based systems (Ubuntu, Mint, etc.)::</p>
+
+<p><code>sudo apt-get install exuberant-ctags</code></p>
+</li>
+<li>
+<p>For Red Hat-based systems (Red Hat, Fedora, CentOS)::</p>
+
+<p><code>sudo yum install ctags</code></p>
+</li>
+</ul>
+
+<h4>
+<a id="install-gotags" class="anchor" href="#install-gotags" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install Gotags</h4>
+
+<p><a href="https://github.com/jstemmer/gotags">Gotags</a></p>
+
+<h3>
+<a id="basic-installation" class="anchor" href="#basic-installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Installation</h3>
+
+<h5>
+<a id="1-clone-the-repository" class="anchor" href="#1-clone-the-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Clone the repository:</h5>
+
+<p><code>git clone git@github.com:smalldirector/oh-my-vim.git ~/.oh-my-vim</code></p>
+
+<h5>
+<a id="2-2-optionally-backup-your-existing-vimrc-file" class="anchor" href="#2-2-optionally-backup-your-existing-vimrc-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 2. <em>Optionally</em>, backup your existing @~/.vimrc@ file:</h5>
+
+<p><code>cp ~/.vimrc ~/.vimrc.bak</code></p>
+
+<h5>
+<a id="3-create-a-new-vimrc-configuration-file" class="anchor" href="#3-create-a-new-vimrc-configuration-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Create a new vimrc configuration file</h5>
+
+<p><code>ln -s ~/.oh-my-vim/vimrc ~/.vimrc</code></p>
+
+<h5>
+<a id="4-create-a-new-vimrc-bundle-configuration-file" class="anchor" href="#4-create-a-new-vimrc-bundle-configuration-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Create a new vimrc bundle configuration file</h5>
+
+<p><code>ln -s ~/.oh-my-vim/vimrc.bundles ~/.vimrc.bundles</code></p>
+
+<h5>
+<a id="5-set-ctags-in-your-vimrc-file" class="anchor" href="#5-set-ctags-in-your-vimrc-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Set ctags in your vimrc file</h5>
+
+<p><code>let g:tagbar_ctags_bin='CTAGS_PATH'</code></p>
+
+<p>If you use <code>Homebrew</code> to install <code>ctags</code> on OS X, this configuration shoule be</p>
+
+<p><code>let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8_1/bin/ctags'</code></p>
+
+<p>and this is the default configuration in the template vimrc file, please change it with your requirement.</p>
+
+<h5>
+<a id="6-install-vim-plugins" class="anchor" href="#6-install-vim-plugins" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Install vim plugins</h5>
+
+<p>We use <code>Vundle</code> to manage our vim plugins, so run <code>:PluginInstall</code> command to install all essential plugins.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>LICENSE</h2>
+
+<p>Oh My Vim is released under the <a href="https://github.com/smalldirector/oh-my-vim/blob/master/LICENSE">MIT license</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/smalldirector/oh-my-vim">Oh-my-vim</a> is maintained by <a href="https://github.com/smalldirector">smalldirector</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
