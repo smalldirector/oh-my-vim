@@ -31,6 +31,9 @@ To install ctags use your package manager.
 
     `sudo yum install ctags`
 
+#### Install Gotags
+[Gotags](https://github.com/jstemmer/gotags)
+
 ### Basic Installation
 
 ##### 1. Clone the repository:
