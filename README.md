@@ -49,6 +49,7 @@ To install ctags use your package manager.
 `let g:tagbar_ctags_bin='CTAGS_PATH'`
 
 If you use `Homebrew` to install `ctags` on OS X, this configuration shoule be
+
 `let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8_1/bin/ctags'`
 
 and this is the default configuration in the template vimrc file, please change it with your requirement.
