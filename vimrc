@@ -1,6 +1,6 @@
 " Load Vundle plugin setting
-set nocompatible                    " be iMproved, required
-filetype off                        " required
+set nocompatible                              " be iMproved, required
+filetype off                                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -11,7 +11,7 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-filetype plugin indent on           " required
+filetype plugin indent on                     " required
 
 
 " Keymap setting
@@ -29,21 +29,21 @@ set background=dark
 colorscheme solarized
 let g:Powerline_colorscheme='solarized256'
 
-set laststatus=2                    " enable status bar
-set number                          " show line number
-set ruler                           " show cursor
-set hlsearch                        " highlight search result
-set cursorline                      " highlight current line
-set cursorcolumn                    " hightlight current column
-set nowrap                          " disable wrap line
-set tabstop=2                       " space number for tab
-set shiftwidth=2                    " space number when format
-set shiftround                      " set shiftround
-set expandtab                       " convert tab to space
-set softtabstop=2                   " make 2 spaces as one tab
-set matchpairs+=<:>                 " enable pair match
-set showcmd                         " dispaly incomplete commands
-set fileencodings=utf-8             " set file encoding
+set laststatus=2                              " enable status bar
+set number                                    " show line number
+set ruler                                     " show cursor
+set hlsearch                                  " highlight search result
+set cursorline                                " highlight current line
+set cursorcolumn                              " hightlight current column
+set nowrap                                    " disable wrap line
+set tabstop=2                                 " space number for tab
+set shiftwidth=2                              " space number when format
+set shiftround                                " set shiftround
+set expandtab                                 " convert tab to space
+set softtabstop=2                             " make 2 spaces as one tab
+set matchpairs+=<:>                           " enable pair match
+set showcmd                                   " dispaly incomplete commands
+set fileencodings=utf-8                       " set file encoding
 
 " NERDTree plugin setting
 nmap <F8> :NERDTreeToggle<CR>
@@ -57,6 +57,24 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 autocmd vimenter * if !argc() | NERDTree | endif
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Syntastic plugin setting
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"modified flag
+set statusline+=%#identifier#
+set statusline+=%m
+set statusline+=%*
+
+" Git setting
+set statusline+=%{fugitive#statusline()}
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Ctags setting
 let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
