@@ -53,3 +53,5 @@ If you use `Homebrew` to install `ctags` on OS X, this configuration shoule be
 `let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8_1/bin/ctags'`
 
 and this is the default configuration in the template vimrc file, please change it with your requirement.
+##### 6. Install vim plugins
+We use `Vundle` to manage our vim plugins, so run `:PluginInstall` command to install all essential plugins.
