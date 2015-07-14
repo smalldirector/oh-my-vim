@@ -11,16 +11,13 @@ The default ``ctags`` executable in OSX does not support recursive directory
 search (i.e. ``ctags -R``). To get a proper copy of ctags, use one of the
 following options:
 
-* Using `Homebrew`_::
+* Using `Homebrew`
 
-    brew install ctags
+    `brew install ctags`
 
-* Using `MacPorts`_::
+* Using `MacPorts`
 
-    port install ctags
-
-.. _`Homebrew`: http://mxcl.github.com/homebrew/
-.. _`MacPorts`: http://www.macports.org/
+    `port install ctags`
 
 ##### Linux
 
@@ -28,11 +25,11 @@ To install ctags use your package manager.
 
 * For Debian-based systems (Ubuntu, Mint, etc.)::
 
-    sudo apt-get install exuberant-ctags
+    `sudo apt-get install exuberant-ctags`
 
 * For Red Hat-based systems (Red Hat, Fedora, CentOS)::
 
-    sudo yum install ctags
+    `sudo yum install ctags`
 
 ### Basic Installation
 
