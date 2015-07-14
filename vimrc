@@ -13,7 +13,6 @@ endif
 
 filetype plugin indent on                     " required
 
-
 " Keymap setting
 let mapleader="\<Space>"
 nmap <Leader>w :w<CR>
@@ -27,9 +26,7 @@ let g:solarized_termcolors=256
 set t_Co=256 
 set background=dark
 colorscheme solarized
-let g:Powerline_colorscheme='solarized256'
 
-set laststatus=2                              " enable status bar
 set number                                    " show line number
 set ruler                                     " show cursor
 set hlsearch                                  " highlight search result
@@ -44,22 +41,16 @@ set softtabstop=2                             " make 2 spaces as one tab
 set matchpairs+=<:>                           " enable pair match
 set showcmd                                   " dispaly incomplete commands
 set fileencodings=utf-8                       " set file encoding
+set laststatus=2                              " enable status bar
 
-"modified flag
-set statusline+=%#identifier#
-set statusline+=%m
-set statusline+=%*
-
-" Git setting
-set statusline+=%{fugitive#statusline()}
+" Airline plugin setting
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Syntastic plugin setting
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
 
 " NERDTree plugin setting
 nmap <F8> :NERDTreeToggle<CR>
