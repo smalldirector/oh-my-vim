@@ -15,11 +15,11 @@ filetype plugin indent on                     " required
 
 
 " Keymap setting
-let mapleader=";"
+let mapleader="\<Space>"
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
-nnoremap <Leader>lw <C-W>l
-nnoremap <Leader>hw <C-W>h
+nnoremap <Leader>l <C-W>l
+nnoremap <Leader>h <C-W>h
 
 " Theme setting
 syntax enable
@@ -45,6 +45,22 @@ set matchpairs+=<:>                           " enable pair match
 set showcmd                                   " dispaly incomplete commands
 set fileencodings=utf-8                       " set file encoding
 
+"modified flag
+set statusline+=%#identifier#
+set statusline+=%m
+set statusline+=%*
+
+" Git setting
+set statusline+=%{fugitive#statusline()}
+
+" Syntastic plugin setting
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " NERDTree plugin setting
 nmap <F8> :NERDTreeToggle<CR>
 let NERDTreeWinSize=32
@@ -58,23 +74,10 @@ autocmd vimenter * if !argc() | NERDTree | endif
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Syntastic plugin setting
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-"modified flag
-set statusline+=%#identifier#
-set statusline+=%m
-set statusline+=%*
-
-" Git setting
-set statusline+=%{fugitive#statusline()}
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" MiniBufExplorer plugin setting
+map <Leader>bu :MBEToggle<cr>
+map <Tab> :bn<cr>
+map <c-Tab> :bp<cr>
 
 " Ctags setting
 let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
