@@ -55,3 +55,7 @@ If you use `Homebrew` to install `ctags` on OS X, this configuration shoule be
 and this is the default configuration in the template vimrc file, please change it with your requirement.
 ##### 6. Install vim plugins
 We use `Vundle` to manage our vim plugins, so run `:PluginInstall` command to install all essential plugins.
+
+## LICENSE
+
+Oh My Vim is released under the [MIT license](https://github.com/smalldirector/oh-my-vim/blob/master/LICENSE).
