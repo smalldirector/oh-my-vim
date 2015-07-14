@@ -1,3 +1,4 @@
+" Load Vundle plugin setting
 set nocompatible                    " be iMproved, required
 filetype off                        " required
 
@@ -13,15 +14,14 @@ endif
 filetype plugin indent on           " required
 
 
-" set leader key
+" Keymap setting
 let mapleader=";"
-" set key map
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 nnoremap <Leader>lw <C-W>l
 nnoremap <Leader>hw <C-W>h
 
-" Enable solarized color
+" Theme setting
 syntax enable
 let g:solarized_termcolors=256
 set t_Co=256 
@@ -29,17 +29,17 @@ set background=dark
 colorscheme solarized
 let g:Powerline_colorscheme='solarized256'
 
-set laststatus=2		                " enable status bar
-set number			                    " show line number
-set ruler		                	      " show cursor
-set hlsearch			                  " highlight search result
-set cursorline			                " highlight current line
-set cursorcolumn		                " hightlight current column
-set nowrap			                    " disable wrap line
-set tabstop=2			                  " space number for tab
-set shiftwidth=2		                " space number when format
-set shiftround			                " set shiftround
-set expandtab			                  " convert tab to space
+set laststatus=2                    " enable status bar
+set number                          " show line number
+set ruler                           " show cursor
+set hlsearch                        " highlight search result
+set cursorline                      " highlight current line
+set cursorcolumn                    " hightlight current column
+set nowrap                          " disable wrap line
+set tabstop=2                       " space number for tab
+set shiftwidth=2                    " space number when format
+set shiftround                      " set shiftround
+set expandtab                       " convert tab to space
 set softtabstop=2                   " make 2 spaces as one tab
 set matchpairs+=<:>                 " enable pair match
 set showcmd                         " dispaly incomplete commands
