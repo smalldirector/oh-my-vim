@@ -47,6 +47,11 @@ set laststatus=2                              " enable status bar
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+" Airline tab(MiniBufExplorer) setting
+map <Leader>bu :MBEToggle<cr>
+map <Tab> :bn<cr>
+map <c-Tab> :bp<cr>
+
 " Syntastic plugin setting
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
@@ -64,11 +69,6 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 autocmd vimenter * if !argc() | NERDTree | endif
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" MiniBufExplorer plugin setting
-map <Leader>bu :MBEToggle<cr>
-map <Tab> :bn<cr>
-map <c-Tab> :bp<cr>
 
 " Ctags setting
 let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
