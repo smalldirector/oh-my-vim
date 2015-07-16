@@ -14,11 +14,13 @@ endif
 filetype plugin indent on                     " required
 
 " Keymap setting
-let mapleader="\<Space>"
+let mapleader = "\<Space>"
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
-nnoremap <Leader>l <C-W>l
 nnoremap <Leader>h <C-W>h
+nnoremap <Leader>j <C-W>j
+nnoremap <Leader>k <C-W>k
+nnoremap <Leader>l <C-W>l
 
 " Theme setting
 syntax enable
@@ -105,3 +107,13 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
+
+" CtrlP plugin setting
+let g:ctrlp_map = '<c-p>'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+endif
